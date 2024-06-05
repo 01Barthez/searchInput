@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #120f22, #181625, #2d2844, #0b0820);
+    background-size: 250%;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.fieldContaineur{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .9);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    width: 50rem;
+    max-width: 95vw;
+    transition: all .2s linear;
+}
+
+.fieldContaineur.active,
+.fieldContaineur:hover{
+    box-shadow: 0 0 .1rem rgba(255, 255, 255, .8),
+    0 0 .3rem rgba(255, 255, 255, .6),
+    0 0 .6rem rgba(255, 255, 255, .2),
+    0 0 .9rem rgba(255, 255, 255, .1);
+}
+
+
+.inputField{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputBox{
+    width: 90%;
+    height: 100%;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    background: transparent;
+    border: none;
+    color: #e3f6fa;
+    display: none;
+}
+
+.typingText{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    color: #7a7d7e;
+    cursor: default;
+}
+
+.typingText .span2{
+    width: .2rem;
+    height: 50%;
+    background: #7a7d7e;
+    margin-left: .5rem;
+    animation: blink .8s linear infinite;
+}
+
+@keyframes blink {
+    from{
+        opacity: 0;
+    }
+}
+
+.searchIcon{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchIcon i{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #686767;
+}
+
+.submitField{
+    width: 30%;
+    height: 100%;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient( 45deg, #130d36, #373158);
+    position: relative;
+    overflow: hidden;
+}
+
+.submitField:hover{
+    box-shadow: -.1rem 0 .3rem rgba(255, 255, 255, .6),
+            inset 0 0 .2rem rgba(255, 255, 255, .6);
+}
+
+.mouse2,
+.mouse{
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    z-index: 5;
+    /* transform: translate(-50%, -50%); */
+    transition: .1s ease-out;
+}
+
+.mouse2{
+    width: 3rem;
+    height: 3rem;
+}
+
+
+.submitField img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    color: #fff;
+}
+
+@media (max-width: 650px) {
+    html{
+        font-size: 7px;
+    }
+}
